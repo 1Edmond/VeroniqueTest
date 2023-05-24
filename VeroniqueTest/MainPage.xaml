@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="VeroniqueTest.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView BackgroundColor="#23232F">
+        <Grid>
+            <Grid RowDefinitions="100,*,*" BackgroundColor="Transparent" Margin="20,250,20,0">
+                <StackLayout Margin="0,0,0,0">
+                    <Label Text="Welcome" FontSize="25" />
+                    <Label Text="Back!" FontSize="25" />
+                </StackLayout>
+                <Grid Grid.Row="1" RowDefinitions="*,*,20" RowSpacing="0">
+                    <Border HeightRequest="60" Padding="10,0" x:Name="EmailBorder" StrokeShape="RoundRectangle 40">
+                        <Grid ColumnDefinitions="*,30" VerticalOptions="Center">
+                            <Entry Placeholder="root@gmail.com" FontSize="17" x:Name="Email" />
+                            <Image Grid.Column="1" x:Name="EmailImage" Source="user.png"/>
+                        </Grid>
+                    </Border>
+                    
+                    <Border HeightRequest="60" Padding="10,0" Grid.Row="1" x:Name="PasswordBorder" StrokeShape="RoundRectangle 40">
+                        <Grid ColumnDefinitions="*,30"  VerticalOptions="Center">
+                            <Entry Placeholder="Password" FontSize="17" IsPassword="True" x:Name="Password" />
+                            <Image Grid.Column="1" x:Name="PasswordImage" Source="key.png"/>
+                        </Grid>
+                    </Border>
+                    <StackLayout HorizontalOptions="End" Grid.Row="2">
+                        <Label Text="Forgot password?" TextColor="#E78F23" TextDecorations="Underline" FontSize="16" />
+                    </StackLayout>
+                </Grid>
+                <Grid ColumnDefinitions="*,*" VerticalOptions="Center" Grid.Row="2">
+                    <Label Text="Sign Up" VerticalOptions="Center" TextDecorations="Underline" FontSize="20" />
+                    <Border Grid.Column="1" Padding="10" BackgroundColor="#E78F23" Stroke="##E78F23" HeightRequest="70" StrokeShape="RoundRectangle 40">
+                        <Image Source="arrow.png" />
+                    </Border>
+                </Grid>
+            </Grid>
+
+
+            <Border Background="#E78F23" Stroke="#E78F23" HeightRequest="500" WidthRequest="500" VerticalOptions="Start"
+                    HorizontalOptions="Start" Margin="-100,-280,0,0"
+                    StrokeShape="RoundRectangle 360">
+                
+            </Border>
+            <Border HeightRequest="100" WidthRequest="100" BackgroundColor="White" Padding="10" VerticalOptions="Start"
+                    HorizontalOptions="End" Margin="0,95,50,0"
+                    StrokeShape="RoundRectangle 360">
+                <Image Source="dotnet_bot" />
+            </Border>
+            
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
